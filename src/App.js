@@ -76,7 +76,7 @@ class App extends Component {
 
 onButtonSubmit = () => {
   this.setState({imageURL: this.state.input});
-  fetch("https://ancient-earth-64906.herokuapp.com/imageurl",
+  fetch("https://ml-facial-recognition.onrender.com/imageurl",
         {method: "post",
         headers: {"Content-Type":"application/json"},
         body: JSON.stringify({
@@ -86,7 +86,7 @@ onButtonSubmit = () => {
       .then(response=>response.json())
   .then(response => {
     if (response) {
-      fetch("https://ancient-earth-64906.herokuapp.com/image",
+      fetch("https://ml-facial-recognition.onrender.com/image",
         {method: "put",
         headers: {"Content-Type":"application/json"},
         body: JSON.stringify({
