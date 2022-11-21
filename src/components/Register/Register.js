@@ -20,7 +20,7 @@ class Register extends Component {
 	}
 	onSubmitSignIn=()=>{
 		
-		fetch("https://ancient-earth-64906.herokuapp.com/register",{method: "post",headers: {"Content-Type":"application/json"},
+		fetch("https://ml-facial-recognition.onrender.com/register",{method: "post",headers: {"Content-Type":"application/json"},
 			body: JSON.stringify({name: this.state.name, email: this.state.email, password: this.state.password})})
 			.then(response=>response.json()).then(user=>{
 				if (user.id) {
